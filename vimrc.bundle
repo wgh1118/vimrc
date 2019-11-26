@@ -1,0 +1,22 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" vundle其他安装路径
+"call vundle#begin('~/some/path/here')
+
+" vundle
+Plugin 'VundleVim/Vundle.vim'
+" airline
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+" powerline/fonts
+Plugin 'powerline/fonts'
+" theme
+Plugin 'ajmwagar/vim-deus'
+" nerdtree
+Plugin 'scrooloose/nerdtree'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
