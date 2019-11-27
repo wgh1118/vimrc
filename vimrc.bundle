@@ -8,15 +8,38 @@ call vundle#begin()
 
 " vundle
 Plugin 'VundleVim/Vundle.vim'
+
 " airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " theme
 Plugin 'ajmwagar/vim-deus'
+
 " nerdtree
 Plugin 'scrooloose/nerdtree'
+
 " powerline/fonts
 Plugin 'powerline/fonts'
+
+Plugin 'Xuyuanp/nerdtree-git-plugin' " git样式
+Plugin 'scrooloose/nerdcommenter' " 注释
+
+" 代码补全
+Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'taglist.vim'
+
+" 代码折叠
+Plugin 'tmhedberg/SimpylFold'
+
+" 自动括号
+Plugin 'jiangmiao/auto-pairs'
+
+" 语法检查
+Plugin 'w0rp/ale'
+
+Plugin 'Chiel92/vim-autoformat'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
