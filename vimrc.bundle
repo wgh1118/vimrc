@@ -36,5 +36,7 @@ Plugin 'jiangmiao/auto-pairs'
 " 语法检查
 Plugin 'w0rp/ale'
 
+Plugin 'Chiel92/vim-autoformat'
+
 call vundle#end()            " required
 filetype plugin indent on    " required

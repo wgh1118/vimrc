@@ -197,6 +197,7 @@ inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR> " 跳转到定义处
 let g:ycm_confirm_extra_conf=0                  " 关闭加载.ycm_extra_conf.py确认提示
+let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 
 " 必须手动输入za来折叠（和取消折叠）
 set foldmethod=indent                " 根据每行的缩进开启折叠
@@ -229,5 +230,12 @@ nmap <Leader>s :ALEToggle<CR>
 "<Leader>d查看错误或警告的详细信息
 nmap <Leader>d :ALEDetail<CR>
 
-" 注释
-map <F4> <leader>ci<CR>
+"保存时自动格式化代码，针对所有支持的文件
+let g:formatdef_my_cpp = '"astyle --style=attach --pad-oper --lineend=linux"'
+let g:formatters_cpp = ['my_cpp']
+au BufWrite * :Autoformat
+
+" 编译
+nnoremap <F5>   <Esc>:w<CR>:!gcc -std=c++11 % -o /tmp/a.out && /tmp/a.out<CR>
+nnoremap <F7>   <Esc>:w<CR>:!gcc -std=c++11 %<CR>
+nnoremap <C-F5> <Esc>:w<CR>:!gcc -std=c++11 -g % -o /tmp/a.out && gdb /tmp/a.out<CR>
