@@ -231,9 +231,8 @@ nmap <Leader>s :ALEToggle<CR>
 nmap <Leader>d :ALEDetail<CR>
 
 "保存时自动格式化代码，针对所有支持的文件
-let g:formatdef_harttle = '"astyle --style=attach --pad-oper"'
-let g:formatters_cpp = ['harttle']
-let g:formatters_c = ['harttle']
+let g:formatdef_my_cpp = '"astyle --style=attach --pad-oper --lineend=linux"'
+let g:formatters_cpp = ['my_cpp']
 au BufWrite * :Autoformat
 
 " 编译
