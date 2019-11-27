@@ -11,12 +11,12 @@ Plugin 'VundleVim/Vundle.vim'
 " airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-" powerline/fonts
-Plugin 'powerline/fonts'
 " theme
 Plugin 'ajmwagar/vim-deus'
 " nerdtree
 Plugin 'scrooloose/nerdtree'
+" powerline/fonts
+Plugin 'powerline/fonts'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
